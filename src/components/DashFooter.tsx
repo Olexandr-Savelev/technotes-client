@@ -14,6 +14,7 @@ const DashFooter: FC = () => {
   };
 
   let goHomeButton = null;
+
   if (pathname !== "/dash") {
     goHomeButton = (
       <button
@@ -25,6 +26,7 @@ const DashFooter: FC = () => {
       </button>
     );
   }
+
   const content = (
     <footer className="dash-footer">
       {goHomeButton}
@@ -32,6 +34,7 @@ const DashFooter: FC = () => {
       <p>Status:</p>
     </footer>
   );
+
   return content;
 };
 
