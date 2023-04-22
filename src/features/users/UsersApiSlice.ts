@@ -29,7 +29,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         return usersAdapter.setAll(initialState, usersList);
       },
       providesTags: (result) =>
-        result
+        result?.ids
           ? [
               ...result.ids.map((id) => ({ type: "Users", id } as const)),
               { type: "Users", id: "LIST" },
